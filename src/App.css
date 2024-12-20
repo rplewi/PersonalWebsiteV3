@@ -5,14 +5,10 @@
 @tailwind utilities;
 
 @layer components {
-
-  .about-me{
-    @apply flex 
-  }
   .navbar-icon {
-    @apply relative flex items-center justify-center 
+    @apply  animate-trans-down relative flex items-center justify-center 
             h-12 w-12 mt-2 mb-2 mx-auto shadow-lg
-            bg-gray-800 text-color4
+            bg-color3 text-color4
             hover:bg-color2 hover:text-color3
             rounded-3xl hover:rounded-xl
             transition-all duration-300 ease-linear
