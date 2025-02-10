@@ -1,5 +1,7 @@
+const flowbite = require("flowbite-react/tailwind");
 /** @type {import('tailwindcss').Config} */
 const plugin = require('tailwindcss/plugin') // Change this later if its not needed??
+
 
 
 module.exports = {
@@ -7,12 +9,16 @@ module.exports = {
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
+    flowbite.content(),
   ],
   theme: {
     extend: {
+      fontFamily:{
+        rubik:['Rubik']
+      },
       keyframes:{
         'trans-down':{
-          '60%':{transform: 'translateY(50px)'}, // Need to fix this animation later, need delay for each icon and to be able to do it correctly.
+          '100%':{transform: 'translateY(-50px)'}, // Need to fix this animation later, need delay for each icon and to be able to do it correctly.
           
         }
       },
@@ -20,10 +26,10 @@ module.exports = {
         'trans-down': 'trans-down 1s ease-in-out '
       },
       colors: {
-        'color1' : '#7C807F',
-        'color2' : '#F7F7F6',
-        'color3' : '#1E2F35',
-        'color4' : '#E5BC57',
+        'color1' : '#293431',
+        'color2' : '#151616',
+        'color3' : '#45AA96',
+        'color4' : '#05CEA8',
       },
     },
   },
@@ -35,16 +41,7 @@ module.exports = {
     } */
 
   plugins: [
-    plugin(function ({ matchUtilities, theme}){
-      matchUtilities(
-        {
-          'animate-delay' : (value) => ({
-
-          }),
-        },
-        {values: theme('transitionDelay')}
-      )
-    })
+    flowbite.plugin(),
   ],
 }
 

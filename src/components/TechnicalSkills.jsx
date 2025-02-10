@@ -1,24 +1,23 @@
-import { useEffect, useRef } from "react"
-import ScrollReveal from "scrollreveal"
+import Classes from "./Classes.jsx"
 
-const ScrollRevealTest = () => {
-    const ref = useRef(null)
 
-    useEffect(() => {
-        const sr = ScrollReveal()
-        if (ref.current) {
-            sr.reveal(ref.current, {delay: 500})
-        }
-    }, [])
+const TechnicalSkills = () => {
 
     return (
-        <div ref={ref} className = "reveal technical-skills flex flex-row px-14 py-96 justify-center justify-items-center">
-            <img className = "h-80 w-60 rounded-xl px-4"src = "Photos/SLARPJUICE.JPG" alt="Loganguskahn"></img>
-            <div className="flex flex-row p-5 text-color3 bg-color4 w-80 h-90 rounded-xl">
-                Put a list here of all my languages
+        <div className = "technical-skills flex flex-row justify-center px-14 pt-12 pb-40">
+            
+            <div className = "p-5 flex flex-row text-color3 bg-color4">
+                    <h className = "text-3xl p-4 text-color2">Relevant Coursework</h>
+                        <ul class="space-y-6 text-left text-gray-500 dark:text-gray-400">
+                            <Classes name = {"Object Oriented Programming"} delay = {600}/>
+                            <Classes name = {"Software Engineering (Current)"} delay = {700}/>
+                            <Classes name = {"Programming Fundamentals"} delay = {800}/>
+                            <Classes name = {"Algorithms and Data Structures"} delay = {900}/>
+                        </ul>
+
             </div>
         </div>
     )
 }
 
-export default ScrollRevealTest
+export default TechnicalSkills
