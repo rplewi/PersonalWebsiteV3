@@ -16,7 +16,7 @@ export default function Project({name, desc, delay, githubLink, languages}){
 
     return (
         <div ref = {ref}>
-            <div className = " bg-color4 p-6 rounded-2xl text-color2 hover:-translate-y-2 flex flex-col justify-between font-rubik">
+            <div className = "h-auto w-auto bg-color4 p-6 rounded-2xl text-color2 hover:-translate-y-2 flex flex-col justify-between font-rubik">
                 <p className = "text-2xl font-bold italic">{name}</p>
                 <p> {desc} </p>
                 <a className = "h-14 w-14" href={githubLink}>
