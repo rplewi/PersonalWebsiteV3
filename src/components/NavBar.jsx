@@ -2,6 +2,7 @@ import { FaLinkedin, FaGithub, FaEnvelope, FaSheetPlastic } from "react-icons/fa
 import { useState, useEffect } from "react";
 import * as React from "react";
 import {motion} from "motion/react"
+import {useRef} from 'react';
 
 
 
@@ -22,6 +23,7 @@ useEffect(() => {
     }
 
 };
+    
 
 window.addEventListener('scroll', handleScroll);
 
@@ -34,11 +36,10 @@ return () => window.removeEventListener('scroll', handleScroll);
             }`}
             yCurrent
         >
-            <motion.div initial={{y:-50}} animate={{y:0}} transition={{delay:0, duration:.09}} className="round-relative flex items-center justify-center h-12 w-12 mt-2 mb-2 mx-auto text-2xl shadow-lg bg-color2 text-color4 hover:bg-white hover:text-color2 rounded-3xl hover:rounded-xl transition-all duration-300 ease-lienar cursor-pointer">R</motion.div>
             <NavBarIcon icon = {<FaLinkedin size="30"/>} text='LinkedIn' delayNum=".1" link="https://www.linkedin.com/in/romanplewis/"/>
             <NavBarIcon icon = {<FaGithub size="30"/>} text='GitHub' delayNum=".3" link="https://github.com/rplewi"/>
             <NavBarIcon icon = {<FaEnvelope size="30"/>} text='Contact' delayNum=".5" link="mailto:rlewi0506@gmail.com"/>
-            <NavBarIcon icon = {<FaSheetPlastic size="30"/>} text='Resume' delayNum=".7" link="Resume/Resume.pdf"/> 
+            <NavBarIcon icon = {<FaSheetPlastic size="30"/>} text='Resume' delayNum=".7" link="Resume/Resume2.pdf"/> 
         </div>
     )
 }

@@ -9,7 +9,7 @@ export default function Contact(){
     useEffect(() => {
         const sr = ScrollReveal()
         if (ref.current) {
-            sr.reveal(ref.current, {delay: 300})
+            sr.reveal(ref.current, {delay: 200})
         }
     }, [])
 
