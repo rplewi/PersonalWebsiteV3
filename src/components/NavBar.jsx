@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import * as React from "react";
 import {motion} from "motion/react"
 import {useRef} from 'react';
+import Resume from "/Resume/Resume2.pdf"
 
 
 
@@ -39,7 +40,7 @@ return () => window.removeEventListener('scroll', handleScroll);
             <NavBarIcon icon = {<FaLinkedin size="30"/>} text='LinkedIn' delayNum=".1" link="https://www.linkedin.com/in/romanplewis/"/>
             <NavBarIcon icon = {<FaGithub size="30"/>} text='GitHub' delayNum=".3" link="https://github.com/rplewi"/>
             <NavBarIcon icon = {<FaEnvelope size="30"/>} text='Contact' delayNum=".5" link="mailto:rlewi0506@gmail.com"/>
-            <NavBarIcon icon = {<FaSheetPlastic size="30"/>} text='Resume' delayNum=".7" link="Resume/Resume2.pdf"/> 
+            <NavBarIcon icon = {<FaSheetPlastic size="30"/>} text='Resume' delayNum=".7" link={Resume || "Resume/Resume2.pdf"}/> 
         </div>
     )
 }
