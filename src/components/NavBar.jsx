@@ -35,7 +35,6 @@ return () => window.removeEventListener('scroll', handleScroll);
             className={`fixed top-0 h-16 w-screen z-10 flex flex-row overflow-hidden border-b-2 bg-color2 border-color4 text-blue-500 shadow-xl translate-x- transition-transform duration-300 ${
                 isScrolled ? "-translate-y-full" : "translate-y-0"
             }`}
-            yCurrent
         >
             <NavBarIcon icon = {<FaLinkedin size="30"/>} text='LinkedIn' delayNum=".1" link="https://www.linkedin.com/in/romanplewis/"/>
             <NavBarIcon icon = {<FaGithub size="30"/>} text='GitHub' delayNum=".3" link="https://github.com/rplewi"/>
